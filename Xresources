@@ -8,8 +8,8 @@
 ! URxvt*skipScroll:                     boolean
 ! URxvt*pastableTabs:                   boolean
 ! URxvt*scrollstyle:                    mode
-! URxvt*scrollBar:                      boolean
-! URxvt*scrollBar_right:                boolean
+URxvt*scrollBar:                        true
+URxvt*scrollBar_right:                  true
 ! URxvt*scrollBar_floating:             boolean
 ! URxvt*scrollBar_align:                mode
 ! URxvt*thickness:                      number
@@ -34,8 +34,8 @@
 ! URxvt*cursorUnderline:                boolean
 ! URxvt*cursorBlink:                    boolean
 ! URxvt*pointerBlank:                   boolean
-! URxvt*background:                     color
-! URxvt*foreground:                     color
+URxvt*background:                       #111111
+URxvt*foreground:                       #aaaaaa
 ! URxvt*color0:                         color
 ! URxvt*color1:                         color
 ! URxvt*color2:                         color
@@ -67,7 +67,7 @@
 ! URxvt*pointerColor2:                  color
 ! URxvt*borderColor:                    color
 ! URxvt*iconFile:                       file
-! URxvt*font:                           fontname
+URxvt*font:                             xft:Monaco:size=12
 ! URxvt*boldFont:                       fontname
 ! URxvt*italicFont:                     fontname
 ! URxvt*boldItalicFont:                 fontname
@@ -89,7 +89,7 @@
 ! URxvt*internalBorder:                 number
 ! URxvt*borderLess:                     boolean
 ! URxvt*lineSpace:                      number
-! URxvt*letterSpace:                    number
+URxvt*letterSpace:                      -4
 ! URxvt*skipBuiltinGlyphs:              boolean
 ! URxvt*pointerBlankDelay:              number
 ! URxvt*backspacekey:                   string
