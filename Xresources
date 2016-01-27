@@ -67,7 +67,7 @@ URxvt*foreground:                       #aaaaaa
 ! URxvt*pointerColor2:                  color
 ! URxvt*borderColor:                    color
 ! URxvt*iconFile:                       file
-URxvt*font:                             xft:Monaco:size=12
+URxvt*font:                             xft:DejaVuMono:size=14
 ! URxvt*boldFont:                       fontname
 ! URxvt*italicFont:                     fontname
 ! URxvt*boldItalicFont:                 fontname
@@ -89,7 +89,7 @@ URxvt*font:                             xft:Monaco:size=12
 ! URxvt*internalBorder:                 number
 ! URxvt*borderLess:                     boolean
 ! URxvt*lineSpace:                      number
-URxvt*letterSpace:                      -4
+URxvt*letterSpace:                      -6
 ! URxvt*skipBuiltinGlyphs:              boolean
 ! URxvt*pointerBlankDelay:              number
 ! URxvt*backspacekey:                   string
