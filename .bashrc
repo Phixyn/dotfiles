@@ -9,7 +9,10 @@ alias ls='ls --color=auto'
 alias vi='vim'
 PS1='[\u@\h \W]\$ '
 
-export VISUAL='vim'
+if [ -d "$HOME/bin" ] ; then
+  PATH="$HOME/bin:$PATH"
+fi
+export PATH # for good measure
 
 # Display the MOTD at a new Bash session
 cat /etc/motd
