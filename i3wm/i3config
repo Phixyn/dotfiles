@@ -181,15 +181,15 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Lock i3 with a dark grey background color
+# lock i3 with a dark grey background color
 bindsym $mod+shift+x exec i3lock -c 111111
 
-# Audio controls using ALSA Mixer
+# audio controls using ALSA Mixer
 bindsym XF86AudioRaiseVolume exec --no-startup-id  amixer -q -D "default" sset "Speaker" playback 5%+ unmute # Increase volume
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -D "default" sset "Speaker" playback 5%- unmute # Decrease volume
 bindsym XF86AudioMute exec --no-startup-id amixer -q -D "default" sset "Speaker" playback toggle # Mute/unmute
 
-# Media player controls
+# media player controls
 bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
