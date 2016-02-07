@@ -1,4 +1,4 @@
-! URxvt*termName:                       string
+URxvt*termName:                         xterm-256color
 ! URxvt*geometry:                       geometry
 ! URxvt*chdir:                          string
 ! URxvt*reverseVideo:                   boolean
@@ -26,14 +26,10 @@ URxvt*scrollBar_right:                  true
 ! URxvt*utmpInhibit:                    boolean
 ! URxvt*urgentOnBell:                   boolean
 ! URxvt*visualBell:                     boolean
-! URxvt*mapAlert:                       boolean
-! URxvt*meta8:                          boolean
 ! URxvt*mouseWheelScrollPage:           boolean
 ! URxvt*tripleclickwords:               boolean
 ! URxvt*insecure:                       boolean
 ! URxvt*cursorUnderline:                boolean
-! URxvt*cursorBlink:                    boolean
-! URxvt*pointerBlank:                   boolean
 URxvt*background:                       #111111
 URxvt*foreground:                       #aaaaaa
 ! URxvt*color0:                         color
@@ -67,10 +63,12 @@ URxvt*foreground:                       #aaaaaa
 ! URxvt*pointerColor2:                  color
 ! URxvt*borderColor:                    color
 ! URxvt*iconFile:                       file
-URxvt*font:                             xft:DejaVuMono:size=14
-! URxvt*boldFont:                       fontname
+URxvt*font:                             xft:Bitstream Vera Sans Mono:size=14:style=roman
+URxvt*boldFont:                         xft:Bitstream Vera Sans Mono:size=14:style=bold
 ! URxvt*italicFont:                     fontname
 ! URxvt*boldItalicFont:                 fontname
+! URxvt*lineSpace:                      number
+! URxvt*letterSpace:                      -5
 ! URxvt*intensityStyles:                boolean
 ! URxvt*inputMethod:                    name
 ! URxvt*preeditType:                    style
@@ -88,45 +86,20 @@ URxvt*font:                             xft:DejaVuMono:size=14
 ! URxvt*externalBorder:                 number
 ! URxvt*internalBorder:                 number
 ! URxvt*borderLess:                     boolean
-! URxvt*lineSpace:                      number
-URxvt*letterSpace:                      -6
-! URxvt*skipBuiltinGlyphs:              boolean
-! URxvt*pointerBlankDelay:              number
-! URxvt*backspacekey:                   string
-! URxvt*deletekey:                      string
-! URxvt*print-pipe:                     string
-! URxvt*modifier:                       modifier
-! URxvt*cutchars:                       string
-! URxvt*answerbackString:               string
-! URxvt*secondaryScreen:                boolean
-! URxvt*secondaryScroll:                boolean
-! URxvt*perl-lib:                       string
-! URxvt*perl-eval:                      perl-eval
-! URxvt*perl-ext-common:                string
-! URxvt*perl-ext:                       string
-! URxvt*iso14755:                       boolean
-! URxvt*iso14755_52:                    boolean
-! URxvt*xrm:                            string
-! URxvt*keysym.sym:                     keysym
-! URxvt*background.border:              boolean
-! URxvt*background.expr:                string
-! URxvt*background.interval:            seconds
-! URxvt*bell-command:                   string
-! URxvt*kuake.hotkey:                   string
-! URxvt*matcher.button:                 string
-! URxvt*matcher.launcher:               string
-! URxvt*matcher.launcher.*:             string
-! URxvt*matcher.pattern.*:              string
-! URxvt*matcher.rend.*:                 string
-! URxvt*remote-clipboard.fetch:         string
-! URxvt*remote-clipboard.store:         string
-! URxvt*searchable-scrollback:          string
-! URxvt*selection-autotransform.*:      string
-! URxvt*selection-pastebin.cmd:         string
-! URxvt*selection-pastebin.url:         string
-! URxvt*selection.pattern-0:            string
-! URxvt*tab-bg:                         colour
-! URxvt*tab-fg:                         colour
-! URxvt*tabbar-bg:                      colour
-! URxvt*tabbar-fg:                      colour
-! URxvt*url-launcher:                   string
+
+XTerm*colorMode:true
+XTerm*toolBar: false
+XTerm*utf8 : 1 
+XTerm*background: #111111
+XTerm*foreground: #aaaaaa
+!XTerm*font: -bitstream-bitstream vera sans mono-medium-r-normal--*-110-*-*-*-*-*-*
+XTerm*faceName: BitStream Vera Sans Mono
+XTerm*faceSize: 12
+!XTerm*VT100.translations: #override : select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+
+Xft.antialias: 1
+Xft.dpi: 96
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.rgba: rgb
+
