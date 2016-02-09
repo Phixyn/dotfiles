@@ -92,6 +92,15 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# make the currently focused window a scratchpad
+bindsym $mod+minus move scratchpad
+
+# show the first scratchpad window
+bindsym $mod+plus scratchpad show
+
+# show the sup-mail scratchpad window, if any.
+#bindsym mod4+s [title="^Sup ::"] scratchpad show
+
 # workspaces
 set $ws1 "1: Txt"
 set $ws2 "2: Zim"
