@@ -1,4 +1,5 @@
-URxvt*termName:                         xterm-256color
+URxvt*termName:                         rxvt-256color
+! URxvt*termName:                       xterm-256color
 ! URxvt*geometry:                       geometry
 ! URxvt*chdir:                          string
 ! URxvt*reverseVideo:                   boolean
@@ -17,9 +18,6 @@ URxvt*scrollBar_right:                  true
 ! URxvt*scrollTtyKeypress:              boolean
 ! URxvt*scrollWithBuffer:               boolean
 ! URxvt*inheritPixmap:                  boolean
-! URxvt*transparent:                    boolean
-! URxvt*tintColor:                      color
-! URxvt*shading:                        number
 ! URxvt*blurRadius:                     HxV
 ! URxvt*fading:                         number
 ! URxvt*fadeColor:                      color
@@ -30,6 +28,10 @@ URxvt*scrollBar_right:                  true
 ! URxvt*tripleclickwords:               boolean
 ! URxvt*insecure:                       boolean
 ! URxvt*cursorUnderline:                boolean
+URxvt*depth:                            32
+URxvt*transparent:                      true
+! URxvt*tintColor:                      color
+URxvt*shading:                          20
 URxvt*background:                       #111111
 URxvt*foreground:                       #aaaaaa
 ! URxvt*color0:                         color
@@ -68,7 +70,7 @@ URxvt*boldFont:                         xft:Bitstream Vera Sans Mono:size=14:sty
 ! URxvt*italicFont:                     fontname
 ! URxvt*boldItalicFont:                 fontname
 ! URxvt*lineSpace:                      number
-! URxvt*letterSpace:                      -5
+! URxvt*letterSpace:                    -5
 ! URxvt*intensityStyles:                boolean
 ! URxvt*inputMethod:                    name
 ! URxvt*preeditType:                    style
@@ -78,7 +80,6 @@ URxvt*boldFont:                         xft:Bitstream Vera Sans Mono:size=14:sty
 ! URxvt*iconName:                       string
 ! URxvt*saveLines:                      number
 ! URxvt*buffered:                       boolean
-! URxvt*depth:                          number
 ! URxvt*visual:                         number
 ! URxvt*transient-for:                  windowid
 ! URxvt*override-redirect:              boolean
