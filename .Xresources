@@ -87,6 +87,10 @@ URxvt*boldFont:                         xft:Bitstream Vera Sans Mono:size=14:sty
 ! URxvt*externalBorder:                 number
 ! URxvt*internalBorder:                 number
 ! URxvt*borderLess:                     boolean
+URxvt.perl-ext-common:                  default,matcher
+URxvt.url-launcher:                     /usr/bin/firefox
+URxvt.matcher.button:                   1
+URxvt.matcher.rend.0:                   Uline Bold fg6
 
 XTerm*colorMode:true
 XTerm*toolBar: false
