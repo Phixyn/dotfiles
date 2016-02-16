@@ -108,8 +108,8 @@ set $ws1 "1: Txt"
 set $ws2 "2: Zim"
 set $ws3 "3: Web"
 set $ws4 "4: Video"
-set $ws5 "5: Music"
-set $ws6 "6: Chat"
+set $ws5 "5: Misc"
+set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -149,18 +149,16 @@ assign [class="Firefox"] $ws3
 assign [class="Keepassx"] $ws3
 assign [class="MPlayer"] $ws4
 assign [class="Vlc"] $ws4
-#assign [class="^Spotify$"] $ws5
-#assign [class="^URxvt$" instance="^weechat$"] $ws6
-assign [class="Skype"] $ws6
+#assign [class="^URxvt$" instance="^weechat$"] $ws5
 
 # spotify so broken gg ;_;
-for_window [class="Spotify"] move to workspace $ws5
+for_window [class="Spotify"] move to workspace $ws6
 
 # autostart applications whenever i3wm starts
 exec --no-startup-id urxvt
 exec --no-startup-id zim
 exec --no-startup-id firefox
-exec --no-startup-id spotify
+exec --no-startup-id sh ~/.fehbg
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
