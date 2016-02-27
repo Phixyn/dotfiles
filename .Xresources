@@ -65,8 +65,8 @@ URxvt*foreground:                       #aaaaaa
 ! URxvt*pointerColor2:                  color
 ! URxvt*borderColor:                    color
 ! URxvt*iconFile:                       file
-URxvt*font:                             xft:Bitstream Vera Sans Mono:size=14:style=roman
-URxvt*boldFont:                         xft:Bitstream Vera Sans Mono:size=14:style=bold
+URxvt*font:                             xft:Bitstream Vera Sans Mono:size=13:style=Roman
+URxvt*boldFont:                         xft:Bitstream Vera Sans Mono:size=13:style=Bold
 ! URxvt*italicFont:                     fontname
 ! URxvt*boldItalicFont:                 fontname
 ! URxvt*lineSpace:                      number
@@ -98,7 +98,7 @@ XTerm*utf8 : 1
 XTerm*background: #111111
 XTerm*foreground: #aaaaaa
 !XTerm*font: -bitstream-bitstream vera sans mono-medium-r-normal--*-110-*-*-*-*-*-*
-XTerm*faceName: BitStream Vera Sans Mono
+XTerm*faceName: Bitstream Vera Sans Mono
 XTerm*faceSize: 12
 !XTerm*VT100.translations: #override : select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
 
