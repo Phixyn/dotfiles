@@ -128,7 +128,7 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
 # switch to next workspace
-bindsym $mod+Tab workspace next
+bindsym Mod1+Tab workspace next
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
