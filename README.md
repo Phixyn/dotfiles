@@ -1,4 +1,4 @@
 # Phixyn's Linux Dotfiles
 
 * In use on my Arch Linux desktop.
-* TODO
+* To be updated.
