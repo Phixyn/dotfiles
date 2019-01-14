@@ -8,3 +8,4 @@ Just the way I like things ☕.
 * Ranger FM configs
 * `.bashrc` for Linux
 * `.bash_profile` for MacOS
+* `.vimrc` <3
