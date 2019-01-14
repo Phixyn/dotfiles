@@ -1,4 +1,10 @@
-# Phixyn's Linux Dotfiles
+# Phixyn's Dotfiles
 
-* In use on my Arch Linux desktop.
-* To be updated.
+Just the way I like things ☕.
+
+## Contents
+
+* i3 WM configs
+* Ranger FM configs
+* `.bashrc` for Linux
+* `.bash_profile` for MacOS
