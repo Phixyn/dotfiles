@@ -40,3 +40,4 @@ alias moon="curl -4 http://wttr.in/Moon"
 alias todo="cat $TODO"
 alias etodo="vim $TODO"
 alias ttodo='clear;echo -e "Important:\n";grep "(A)" $TODO;echo'
+alias morning="osascript $HOME/bin/morning.applescript"
