@@ -1,3 +1,23 @@
+! Dracula Xresources palette
+*.foreground: #F8F8F2
+*.background: #282A36
+*.color0:     #000000
+*.color8:     #4D4D4D
+*.color1:     #FF5555
+*.color9:     #FF6E67
+*.color2:     #50FA7B
+*.color10:    #5AF78E
+*.color3:     #F1FA8C
+*.color11:    #F4F99D
+*.color4:     #BD93F9
+*.color12:    #CAA9FA
+*.color5:     #FF79C6
+*.color13:    #FF92D0
+*.color6:     #8BE9FD
+*.color14:    #9AEDFE
+*.color7:     #BFBFBF
+*.color15:    #E6E6E6
+! Unicode Rxvt
 URxvt*termName:                         rxvt-256color
 ! URxvt*geometry:                       geometry
 ! URxvt*chdir:                          string
@@ -34,33 +54,6 @@ URxvt*shading:                          20
 ! URxvt*cursorUnderline:                boolean
 ! URxvt*cursorBlink:                    boolean
 ! URxvt*pointerBlank:                   boolean
-URxvt*background:                       #111111
-URxvt*foreground:                       #aaaaaa
-! URxvt*color0:                         color
-! URxvt*color1:                         color
-! URxvt*color2:                         color
-! URxvt*color3:                         color
-! URxvt*color4:                         color
-! URxvt*color5:                         color
-! URxvt*color6:                         color
-! URxvt*color7:                         color
-! URxvt*color8:                         color
-! URxvt*color9:                         color
-! URxvt*color10:                        color
-! URxvt*color11:                        color
-! URxvt*color12:                        color
-! URxvt*color13:                        color
-! URxvt*color14:                        color
-! URxvt*color15:                        color
-! URxvt*colorBD:                        color
-! URxvt*colorIT:                        color
-! URxvt*colorUL:                        color
-! URxvt*colorRV:                        color
-! URxvt*underlineColor:                 color
-! URxvt*scrollColor:                    color
-! URxvt*troughColor:                    color
-! URxvt*highlightColor:                 color
-! URxvt*highlightTextColor:             color
 ! URxvt*cursorColor:                    color
 ! URxvt*cursorColor2:                   color
 ! URxvt*pointerColor:                   color
@@ -91,7 +84,7 @@ URxvt*depth:                            32
 ! URxvt*internalBorder:                 number
 ! URxvt*borderLess:                     boolean
 ! URxvt*lineSpace:                      number
-! URxvt*letterSpace:                      1
+! URxvt*letterSpace:                    1
 ! URxvt*skipBuiltinGlyphs:              boolean
 ! URxvt*pointerBlankDelay:              number
 ! URxvt*backspacekey:                   string
@@ -136,8 +129,6 @@ URxvt*depth:                            32
 XTerm*colorMode: true
 XTerm*toolBar: false
 XTerm*utf8: 1
-XTerm*background: #111111
-XTerm*foreground: #aaaaaa
 XTerm*faceName: DejaVu Sans Mono
 XTerm*faceSize: 12
 
