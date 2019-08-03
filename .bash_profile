@@ -5,7 +5,7 @@ export LANG=en_US.UTF-8
 
 export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 export ANDROID_HOME="$HOME/Library/Android/sdk/"
-export TODO="$HOME/Documents/Journal/todo.md"
+export TODO="$HOME/Documents/Journal/todo.txt"
 
 # git
 # https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
