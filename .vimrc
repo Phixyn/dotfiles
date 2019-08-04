@@ -1,6 +1,4 @@
 syntax on
-" https://github.com/dracula/vim
-color dracula
 set smartindent
 set shiftwidth=4
 set tabstop=4 " number of visual spaces per tab
@@ -13,6 +11,7 @@ set cursorline
 set showmatch " highlight matching brackets
 set incsearch " search as characters are entered
 set hlsearch " highlight search matches
+set nocursorline " do not highlight current line, looks a bit bad with Dracula
 
 " ctrl-p
 let g:ctrlp_working_path_mode = 'r'
@@ -54,3 +53,5 @@ map <C-l> <C-W>l
 " https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
 call pathogen#helptags()
+" https://github.com/dracula/vim
+color dracula
