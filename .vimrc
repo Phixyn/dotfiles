@@ -13,6 +13,9 @@ set incsearch " search as characters are entered
 set hlsearch " highlight search matches
 set nocursorline " do not highlight current line, looks a bit bad with Dracula
 
+" Set filetype of Fastlane's Fastfile to Ruby on opening or creating one
+autocmd BufNewFile,BufRead Fastfile set filetype=ruby
+
 " ctrl-p
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_show_hidden=1
@@ -27,7 +30,7 @@ set noshowmode
 set laststatus=2
 
 let g:airline_theme = 'dracula'
-let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline_left_sep = ' ❤  '
 let g:airline_right_sep = ' ✦  '
