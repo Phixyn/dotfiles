@@ -4,7 +4,7 @@ in a status bar component.
 
 
 __author__ = "Phixyn (Alpeche Pancha)"
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 
 import iterm2
@@ -30,12 +30,11 @@ get_artist_cmd = [
 
 async def main(connection):
     app = await iterm2.async_get_app(connection)
-
     component = iterm2.StatusBarComponent(
         short_description="Spotify Now Playing",
         detailed_description="Shows your currently playing Spotify song and artist",
         knobs=[],
-        exemplar="▶ Grimes - REALiTi (Demo)",
+        exemplar="▶ Grimes - REALiTi",
         update_cadence=5,
         identifier="com.phixyn.nixes.spotify-now-playing")
 
@@ -51,34 +50,30 @@ async def main(connection):
         global artist
         global temp_song
 
-        song = subprocess.run(
-            get_song_cmd,
-            check=True,
-            capture_output=True,
-            timeout=5,
-            text=True).stdout.strip()
-
-        artist = subprocess.run(
-            get_artist_cmd,
-            check=True,
-            capture_output=True,
-            timeout=5,
-            text=True).stdout.strip()
-
-        display_notification_cmd = [
-            "osascript",
-            "-e",
-            'display notification "{}" with title "{}"'.format(artist, song)
-        ]
-
-        if song != temp_song:
-            temp_song = song
-            subprocess.run(
-                display_notification_cmd,
+        try:
+            song = subprocess.run(
+                get_song_cmd,
                 check=True,
                 capture_output=True,
                 timeout=5,
                 text=True).stdout.strip()
+
+            artist = subprocess.run(
+                get_artist_cmd,
+                check=True,
+                capture_output=True,
+                timeout=5,
+                text=True).stdout.strip()
+        except subprocess.CalledProcessError as ex:
+            song = None
+            artist = None
+            print("Could not get song name or artist from Spotify process.")
+            print(ex)
+
+        # Individual sessions may have a stale song name. We need to keep track of the
+        # current song ourselves.
+        if song != temp_song:
+            temp_song = song
 
         await session.async_set_variable("user.currentSong", song)
         await session.async_set_variable("user.currentArtist", artist)
@@ -90,9 +85,12 @@ async def main(connection):
     # change the function gets called.
     @iterm2.StatusBarRPC
     async def coro(
-            knobs,
-            current_song=iterm2.Reference("user.currentSong?"),
-            current_artist=iterm2.Reference("user.currentArtist?")):
+        knobs,
+        current_song=iterm2.Reference("user.currentSong?"),
+        current_artist=iterm2.Reference("user.currentArtist?")
+    ):
+        if not current_artist and not current_song:
+            return "■ No track playing"
         return "▶ {} - {}".format(current_artist, current_song)
 
     # Register the status bar component.
