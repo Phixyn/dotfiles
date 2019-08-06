@@ -1,4 +1,4 @@
-# For use with MacOS
+# For use on MacOS
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -41,3 +41,6 @@ alias todo="cat $TODO"
 alias etodo="vim $TODO"
 alias ttodo='clear;echo -e "Important:\n";grep "(A)" $TODO;echo'
 alias morning="osascript $HOME/bin/morning.applescript"
+
+# iTerm Shell Integration (https://iterm2.com/documentation-shell-integration.html)
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
