@@ -60,8 +60,8 @@ URxvt*shading:                          20
 ! URxvt*pointerColor2:                  color
 ! URxvt*borderColor:                    color
 ! URxvt*iconFile:                       file
-URxvt*font:                             xft:DejaVu Sans Mono:size=13:style=Roman
-URxvt*boldFont:                         xft:DejaVu Sans Mono:size=13:style=Bold
+URxvt*font:                             xft:DejaVu Sans Mono:size=12:style=Roman
+URxvt*boldFont:                         xft:DejaVu Sans Mono:size=12:style=Bold
 ! URxvt*font:                             xft:Bitstream Vera Sans Mono:size=13:style=Roman
 ! URxvt*boldFont:                         xft:Bitstream Vera Sans Mono:size=13:style=Bold
 ! URxvt*italicFont:                     fontname
