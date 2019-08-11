@@ -73,7 +73,7 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # Editing and reloading bash profile
 alias ebash="vim $HOME/.bashrc"
 alias rbash="source $HOME/.bashrc"
-alias lsa="ls -lahG"
+alias lsa="ls -lah"
 # Productivity/misc
 alias weather="curl -4 http://wttr.in/Ipswich"
 alias moon="curl -4 http://wttr.in/Moon"
