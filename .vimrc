@@ -1,4 +1,6 @@
 syntax on
+" https://github.com/dracula/vim
+color dracula
 set smartindent
 set shiftwidth=4
 set tabstop=4 " number of visual spaces per tab
@@ -11,7 +13,8 @@ set cursorline
 set showmatch " highlight matching brackets
 set incsearch " search as characters are entered
 set hlsearch " highlight search matches
-set nocursorline " do not highlight current line, looks a bit bad with Dracula
+set clipboard=unnamed " use os clipboard
+set mouse=a " enable mouse in all modes
 
 " Set filetype of Fastlane's Fastfile to Ruby on opening or creating one
 autocmd BufNewFile,BufRead Fastfile set filetype=ruby
@@ -38,6 +41,9 @@ let g:airline_section_warning = ''
 let g:airline_section_y = ''
 let g:airline_section_x = ''
 
+" Toggle mouse mode
+map <S-s> <Esc>:exec &mouse!=""? "set mouse=" : "set mouse=a"<CR>
+
 " Move between buffers
 map <C-j> <Esc>:bprev<CR>
 map <C-k> <Esc>:bnext<CR>
@@ -56,5 +62,3 @@ map <C-l> <C-W>l
 " https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
 call pathogen#helptags()
-" https://github.com/dracula/vim
-color dracula
