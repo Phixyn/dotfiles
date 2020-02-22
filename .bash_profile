@@ -3,7 +3,7 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools:$HOME/.gem/ruby/2.3.0/bin"
 export ANDROID_HOME="$HOME/Library/Android/sdk/"
 export TODO="$HOME/Documents/Journal/todo.txt"
 
@@ -35,12 +35,28 @@ alias grep="grep --colour=AUTO"
 # Python3 virtualenv
 alias virtualenv3="$HOME/Library/Python/3.7/bin/virtualenv"
 # Productivity/misc
-alias weather="curl -4 http://wttr.in/Ipswich"
-alias moon="curl -4 http://wttr.in/Moon"
+alias weather="curl -4s http://wttr.in/Ipswich?F"
+alias fweather="curl -4s http://wttr.in/Ipswich?format=v2"
+alias sweather="curl -4s http://wttr.in/Ipswich?1QF"
+alias lweather='curl -4s http://wttr.in/{Ipswich,London,Toronto}?format="%c%20+%l:+%t+%w"'
+alias moon="curl -4s http://wttr.in/Moon?F"
+alias scal="cal -A 2"
+alias ycal="cal -y"
 alias todo="cat $TODO"
 alias etodo="vim $TODO"
+alias stodo='echo -e "Top 5 tasks:\n";head -n 5 $TODO;echo'
 alias ttodo='clear;echo -e "Important:\n";grep "(A)" $TODO;echo'
 alias morning="osascript $HOME/bin/morning.applescript"
+alias day="clear;echo;date;echo;scal;stodo;echo;sweather;echo;moon"
+alias sday="clear;echo;date;echo;lweather;echo;scal;stodo;echo;moon"
 
 # iTerm Shell Integration (https://iterm2.com/documentation-shell-integration.html)
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# iTerm user vars (https://www.iterm2.com/documentation-scripting-fundamentals.html)
+function iterm2_print_user_vars() {
+  iterm2_set_user_var weatherCondition $(curl -4s -m 0.1 http://wttr.in/Ipswich?format="%c")
+  iterm2_set_user_var weatherLocation $(curl -4s -m 0.1 http://wttr.in/Ipswich?format="%l")
+  iterm2_set_user_var weatherTemp $(curl -4s -m 0.1 http://wttr.in/Ipswich?format="%t")
+  iterm2_set_user_var weatherWind $(curl -4s -m 0.1 http://wttr.in/Ipswich?format="%w")
+}
