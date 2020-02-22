@@ -10,11 +10,12 @@ PLUGINS=(
   "vim-airline/vim-airline-themes"
   "scrooloose/nerdtree"
   "tpope/vim-pathogen"
-  # "terryma/vim-multiple-cursors"
+  "terryma/vim-multiple-cursors"
   "airblade/vim-gitgutter"
   "gabrielelana/vim-markdown"
   # "leafgarland/typescript-vim"
   # "bigfish/vim-js-context-coloring"
+  "pangloss/vim-javascript"
 )
 
 mkdir -p $PLUGIN_DIR
@@ -22,8 +23,7 @@ mkdir -p $COLORS_DIR
 mkdir -p $AUTOLOAD_DIR
 
 wget https://raw.githubusercontent.com/Phixyn/dotfiles/master/.vimrc -O $HOME/.vimrc
-# wget https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim -O $COLORS_DIR/dracula.vim
-git clone https://github.com/dracula/vim.git $PLUGIN_DIR/dracula-theme
+wget https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim -O $COLORS_DIR/dracula.vim
 
 for PLUGIN in ${PLUGINS[@]}; do
   DIRNAME="$(basename $PLUGIN)"
