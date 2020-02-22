@@ -3,7 +3,7 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools:$HOME/.gem/ruby/2.3.0/bin"
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools:$HOME/.gem/ruby/2.3.0/bin:$HOME/bin/apache-maven-3.6.3/bin"
 export ANDROID_HOME="$HOME/Library/Android/sdk/"
 export TODO="$HOME/Documents/Journal/todo.txt"
 
@@ -49,6 +49,7 @@ alias ttodo='clear;echo -e "Important:\n";grep "(A)" $TODO;echo'
 alias morning="osascript $HOME/bin/morning.applescript"
 alias day="clear;echo;date;echo;scal;stodo;echo;sweather;echo;moon"
 alias sday="clear;echo;date;echo;lweather;echo;scal;stodo;echo;moon"
+alias mday="clear;echo;date;echo;lweather;echo;moon"
 
 # iTerm Shell Integration (https://iterm2.com/documentation-shell-integration.html)
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
