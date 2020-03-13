@@ -1,5 +1,5 @@
 syntax on
-" packadd! dracula    " this may be needed sometimes, but not in current setup
+packadd! dracula
 colorscheme dracula
 set smartindent
 set shiftwidth=4
