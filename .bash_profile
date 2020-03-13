@@ -3,7 +3,7 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools:$HOME/.gem/ruby/2.3.0/bin:$HOME/bin/apache-maven-3.6.3/bin"
+export PATH="$PATH:$HOME/bin:$HOME/Library/Android/sdk/platform-tools:$HOME/.gem/ruby/2.3.0/bin:$HOME/bin/apache-maven-3.6.3/bin"
 export ANDROID_HOME="$HOME/Library/Android/sdk/"
 export TODO="$HOME/Documents/Journal/todo.txt"
 
@@ -32,8 +32,10 @@ alias rbash="source $HOME/.bash_profile"
 alias ls="ls -G"
 alias lsa="ls -lahG"
 alias grep="grep --colour=AUTO"
-# Python3 virtualenv
-alias virtualenv3="$HOME/Library/Python/3.7/bin/virtualenv"
+# Docker
+alias dls="docker ps -a"
+# Anaconda
+alias condals="ls $HOME/opt/anaconda3/envs/"
 # Productivity/misc
 alias weather="curl -4s http://wttr.in/Ipswich?F"
 alias fweather="curl -4s http://wttr.in/Ipswich?format=v2"
