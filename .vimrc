@@ -40,7 +40,6 @@ set noruler
 set noshowmode
 set laststatus=2 " always display the status line
 
-" let g:airline_theme = 'dracula'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline_left_sep = ' ❤  '
