@@ -1,5 +1,5 @@
 syntax on
-packadd! dracula
+" packadd! dracula    " this may be needed sometimes, but not in current setup
 colorscheme dracula
 set smartindent
 set shiftwidth=4
@@ -68,8 +68,3 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Switch to left / right split (mostly for Nerd Tree)
 map <C-h> <C-W>h
 map <C-l> <C-W>l
-
-" Start pathogen
-" https://github.com/tpope/vim-pathogen
-" execute pathogen#infect()
-" call pathogen#helptags()
