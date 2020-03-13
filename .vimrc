@@ -1,5 +1,6 @@
 syntax on
-color dracula         " https://github.com/dracula/vim
+packadd! dracula
+colorscheme dracula
 set smartindent
 set shiftwidth=4
 set tabstop=4         " number of visual spaces per tab
@@ -39,7 +40,7 @@ set noruler
 set noshowmode
 set laststatus=2 " always display the status line
 
-let g:airline_theme = 'dracula'
+" let g:airline_theme = 'dracula'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline_left_sep = ' ❤  '
@@ -70,5 +71,5 @@ map <C-l> <C-W>l
 
 " Start pathogen
 " https://github.com/tpope/vim-pathogen
-execute pathogen#infect()
-call pathogen#helptags()
+" execute pathogen#infect()
+" call pathogen#helptags()
