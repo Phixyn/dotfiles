@@ -8,9 +8,9 @@ export ANDROID_HOME="$HOME/Library/Android/sdk/"
 export TODO="$HOME/Documents/Journal/todo.txt"
 
 # git
-# wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+# https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 source $HOME/bin/git-completion.bash
-# wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+# https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 source $HOME/bin/git-prompt.sh
 
 export GIT_PROMPT_ONLY_IN_REPO=1
