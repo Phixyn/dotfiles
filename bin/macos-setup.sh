@@ -10,15 +10,16 @@ fi
 
 echo "[INFO] Installing Homebrew..."
 echo "[WARN] This uses sudo, get ready to type password multiple times."
-#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-#brew tap Homebrew/bundle
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew tap Homebrew/bundle
+
 echo "[INFO] Installing applications from Brewfile..."
 echo "[WARN] Get ready to type password."
 brew bundle
 
 echo "[INFO] Downloading git-completion.bash and git-prompt.sh..."
-curl -o $HOME/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
-curl -o $HOME/git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+curl -o $HOME/bin/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+curl -o $HOME/bin/git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 
 echo "[INFO] Copying bin files to $HOME/bin..."
 cp -v bin/* $HOME/bin/
