@@ -2,6 +2,7 @@
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 export PATH="$PATH:$HOME/bin:$HOME/Library/Android/sdk/platform-tools:$HOME/.gem/ruby/2.3.0/bin:$HOME/bin/apache-maven-3.6.3/bin"
 export ANDROID_HOME="$HOME/Library/Android/sdk/"
