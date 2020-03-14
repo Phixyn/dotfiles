@@ -24,6 +24,10 @@ curl -o $HOME/bin/git-prompt.sh https://raw.githubusercontent.com/git/git/master
 echo "[INFO] Copying bin files to $HOME/bin..."
 cp -v bin/* $HOME/bin/
 
+echo "[INFO] Downloading ticker.sh..."
+curl -o $HOME/bin/ticker.sh https://raw.githubusercontent.com/pstadler/ticker.sh/master/ticker.sh
+chmod +x $HOME/bin/ticker.sh
+
 echo "[INFO] Copying .bash_profile to user folder."
 cp .bash_profile $HOME/.bash_profile
 
