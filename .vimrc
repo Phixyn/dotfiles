@@ -16,6 +16,7 @@ set hlsearch          " highlight search matches
 set clipboard=unnamed " use os clipboard
 set mouse=a           " enable mouse in all modes
 set showcmd           " display incomplete commands
+set backspace=indent,eol,start " fix backspace issue on MacOS
 
 " Set filetype of Fastlane's Fastfile to Ruby on opening or creating one
 autocmd BufNewFile,BufRead Fastfile set filetype=ruby
