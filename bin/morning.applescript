@@ -7,9 +7,10 @@ end tell
 
 delay 1
 
+-- Start internal wiki on detached Screen
 tell application "iTerm2"
-    tell first session of current tab of current window
-        select
+    tell first tab of current window to select
+    tell first session of first tab of current window
         write text "screen -S Journal"
         write text "cd $HOME/Documents/Journal"
         write text "source .env/bin/activate"
@@ -17,8 +18,31 @@ tell application "iTerm2"
     end tell
 end tell
 
-tell application "System Events" to keystroke "a" using {control down}
-tell application "System Events" to keystroke "d"
+-- Detach from Screen
+tell application "System Events"
+    keystroke "a" using {control down}
+    keystroke "d"
+end tell
+
+delay 1
+
+-- Start 'URL Markify' on detached Screen
+tell application "iTerm2"
+    tell first tab of current window to select
+    tell first session of first tab of current window
+        write text "screen -S Markify"
+        write text "cd $HOME/Documents/Development/personal/python-scripts"
+        write text "source .env/bin/activate"
+        write text "./url_markify.py"
+    end tell
+end tell
+
+tell application "System Events"
+    keystroke "a" using {control down}
+    keystroke "d"
+end tell
+
+delay 1
 
 tell application "Spotify"
     activate
@@ -26,7 +50,12 @@ tell application "Spotify"
     pause
 end tell
 
+delay 1
+
+-- Start 'Spotify Now Playing' script
 tell application "iTerm2"
+    activate
+    tell first tab of current window to select
     tell second session of first tab of current window
         select
         write text "screen -S Now-Playing"
@@ -34,6 +63,7 @@ tell application "iTerm2"
     end tell
 end tell
 
+-- Start rest of applications
 tell application "Dash" to activate
 tell application "Slack" to activate
 tell application "Firefox" to activate
