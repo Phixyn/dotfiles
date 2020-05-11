@@ -11,7 +11,7 @@ delay 1
 tell application "iTerm2"
     tell first tab of current window to select
     tell first session of first tab of current window
-        write text "screen -S Journal"
+        write text "screen -S journal -t simiki"
         write text "cd $HOME/Documents/Journal"
         write text "source .env/bin/activate"
         write text "./start.sh"
@@ -30,7 +30,7 @@ delay 1
 tell application "iTerm2"
     tell first tab of current window to select
     tell first session of first tab of current window
-        write text "screen -S Markify"
+        write text "screen -S markify -t markify"
         write text "cd $HOME/Documents/Development/personal/python-scripts"
         write text "source .env/bin/activate"
         write text "./url_markify.py"
@@ -58,7 +58,7 @@ tell application "iTerm2"
     tell first tab of current window to select
     tell second session of first tab of current window
         select
-        write text "screen -S Now-Playing"
+        write text "screen -S now-playing -t Spotify"
         write text "clear ; $HOME/bin/mac-spotify-now-playing.sh"
     end tell
 end tell
