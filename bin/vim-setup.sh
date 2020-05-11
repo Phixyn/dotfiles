@@ -8,7 +8,7 @@ PLUGINS=(
   "vim-airline/vim-airline"
   "vim-airline/vim-airline-themes"
   "scrooloose/nerdtree"
-  "tpope/vim-pathogen"
+  "freitass/todo.txt-vim"
   "terryma/vim-multiple-cursors"
   "airblade/vim-gitgutter"
   "gabrielelana/vim-markdown"
