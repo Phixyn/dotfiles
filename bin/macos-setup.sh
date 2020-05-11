@@ -8,6 +8,9 @@ if [[ "$(basename $PWD)" != "dotfiles" ]]; then
   exit 1
 fi
 
+echo "[INFO] Creating home bin folder if it doesn't exist."
+mkdir -p $HOME/bin
+
 echo "[INFO] Installing Homebrew..."
 echo "[WARN] This uses sudo, get ready to type password multiple times."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -17,11 +20,14 @@ echo "[INFO] Installing applications from Brewfile..."
 echo "[WARN] Get ready to type password."
 brew bundle
 
+echo "[INFO] Creating symlink for GNU Screen in home bin folder."
+ln -s /usr/local/opt/screen/bin/screen $HOME/bin/screen
+
 echo "[INFO] Downloading git-completion.bash and git-prompt.sh..."
 curl -o $HOME/bin/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 curl -o $HOME/bin/git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 
-echo "[INFO] Copying bin files to $HOME/bin..."
+echo "[INFO] Copying bin files to $HOME/bin."
 cp -v bin/* $HOME/bin/
 
 echo "[INFO] Downloading ticker.sh..."
@@ -30,6 +36,9 @@ chmod +x $HOME/bin/ticker.sh
 
 echo "[INFO] Copying .bash_profile to user folder."
 cp .bash_profile $HOME/.bash_profile
+
+echo "[INFO] Copying .screenrc to user folder."
+cp .screenrc $HOME/.screenrc
 
 echo "[INFO] Executing vim-setup.sh script..."
 /bin/bash ./bin/vim-setup.sh

@@ -1,0 +1,24 @@
+# the dash makes it a login shell
+shell -$SHELL
+startup_message off
+# don't ring bell on tab completion
+vbell off
+vbell_msg ""
+# line scrollback amount
+defscrollback 1024
+# enable "alternate screen" support, just like in xterm
+# i.e. don't keep full screen programs like vim in scrollback
+altscreen on
+
+# windows
+# screen -t Journal 1
+# screen -t Python  2 python3.7
+# select 2
+
+# status lines
+# clean and simple
+# hardstatus alwayslastline "%{=}%-w%{+b c}%n %t%{-b w}%+w %=%{m}%c "
+# with background and different colors modified version of the above with time on the right
+hardstatus alwayslastline "%{= w}%-w%{= Bk} %n %t %{-}%+w %=%{c}%c "
+# original version of the above
+# hardstatus alwayslastline "%{= w}%-w%{= Bk} %n %t %{-}%+w %-=" # like the background
