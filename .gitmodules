@@ -1,0 +1,3 @@
+[submodule "bin/ticker.sh"]
+	path = bin/ticker.sh
+	url = https://github.com/pstadler/ticker.sh.git
