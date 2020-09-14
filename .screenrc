@@ -10,6 +10,13 @@ defscrollback 1024
 # i.e. don't keep full screen programs like vim in scrollback
 altscreen on
 
+# 256 colors
+attrcolor b ".I"
+term screen-256color
+#term xterm
+#termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce on
+
 # windows
 # screen -t Journal 1
 # screen -t Python  2 python3.7
