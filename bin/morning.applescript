@@ -64,7 +64,6 @@ tell application "iTerm2"
 end tell
 
 -- Start rest of applications
-tell application "Dash" to activate
 tell application "Slack" to activate
 tell application "Firefox" to activate
 tell application "RoboForm" to activate
