@@ -6,14 +6,15 @@ Configuration files that I use on Linux OSs, BSD and MacOS.
 
 ## Contents
 
-* bin folder containing setup and helper scripts
-* i3 WM configs
-* Ranger FM configs
-* `.Xresources` for X applications
-* `.bashrc` for bash on Linux
-* `.bash_profile` for bash on MacOS
-* `Brewfile` for quickly installing applications on MacOS using [Homebrew](https://brew.sh/)
-* `.vimrc` and `vim-setup.sh` :purple_heart:
+- bin folder containing setup and helper scripts
+- i3 WM configs
+- Ranger FM configs
+- VSCode settings and extension list
+- `.Xresources` for X applications
+- `.bashrc` for bash on Linux
+- `.bash_profile` for bash on MacOS
+- `Brewfile` for quickly installing applications on MacOS using [Homebrew](https://brew.sh/)
+- `.vimrc` and `vim-setup.sh` :purple_heart:
 
 ### AppleScript vs. 'Login Items'
 

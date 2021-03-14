@@ -1,0 +1,77 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "breadcrumbs.enabled": true,  
+    "editor.fontSize": 16,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 120,
+    "editor.tabSize": 2,
+    "editor.renderIndentGuides": true,
+    "editor.detectIndentation": false,
+    "editor.formatOnSaveMode": "modifications",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": false
+    },
+    "editor.wordBasedSuggestions": false,
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.autoClosingBrackets": "never",
+    "editor.selectionHighlight": false,
+    "files.associations": {
+      ".pylintrc": "ini"
+    },
+    "files.eol": "\n",
+    "files.hotExit": "onExit",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": 0,
+    "workbench.activityBar.visible": true,
+    // "workbench.colorTheme": "Tomorrow Night",
+    "workbench.colorTheme": "Horizon Dark",
+    "workbench.colorCustomizations": {
+      "statusBar.background" : "#161616",
+      "tab.activeModifiedBorder": "#8501A7"
+    },
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editorAssociations": [
+      {
+        "viewType": "jupyter.notebook.ipynb",
+        "filenamePattern": "*.ipynb"
+      }
+    ],
+    "extensions.ignoreRecommendations": true,
+    "markdown.extension.toc.levels": "2..6",
+    "markdown.extension.toc.tabSize": 4,
+    "markdown.extension.list.indentationSize": "inherit",
+    "markdown.extension.print.theme": "dark",
+    "markdown.extension.italic.indicator": "_",
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+      "vue-html": "html",
+      "javascript": "javascriptreact",
+      "vue": "html"
+    },
+    "python.showStartPage": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "[markdown]": {
+      "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[vue]": {
+      "editor.defaultFormatter": "octref.vetur"
+    },
+}
