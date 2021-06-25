@@ -27,15 +27,19 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 # git
-# wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+# curl -O https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 source $HOME/bin/git-completion.bash
-# wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+# curl -O https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 source $HOME/bin/git-prompt.sh
 
 export GIT_PROMPT_ONLY_IN_REPO=1
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWCOLORHINTS=true
+
+# Default text editors (git and other programs)
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # Set prompt
 if [ "$color_prompt" = yes ]; then
