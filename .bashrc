@@ -18,7 +18,7 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 
 # Check the window size after each command and, if necessary,
-# Update the values of LINES and COLUMNS.
+# update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
 # Make less more friendly for non-text input files, see lesspipe(1)
@@ -115,7 +115,7 @@ alias dls="docker ps -a"
 # Anaconda
 alias condals="ls $HOME/miniconda3/envs/"
 # Productivity/misc
-alias wanipv6="dig @resolver1.opendns.com myip.opendns.com +short -4"
+alias wanipv4="dig @resolver4.opendns.com myip.opendns.com +short -4"
 alias weather="curl -4 http://wttr.in/Ipswich"
 alias fweather="curl -4s http://wttr.in/Ipswich?format=v2"
 alias sweather="curl -4s http://wttr.in/Ipswich?1QF"
