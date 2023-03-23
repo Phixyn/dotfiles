@@ -44,6 +44,9 @@ if [ -n "$force_color_prompt" ]; then
   fi
 fi
 
+# Env
+export TODO="$HOME/Documents/Wikis/general/content/general/todo.txt"
+
 # git
 # curl -O https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 source $HOME/bin/git-completion.bash
@@ -78,7 +81,7 @@ unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 # if we want the chroot name in prompt, use:
-#     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+#   PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
 case "$TERM" in
   xterm*|rxvt*)
     PS1="\[\e]0;\u@\h: \w\a\]$PS1"
@@ -105,11 +108,29 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # Editing and reloading bash profile
 alias ebash="vim $HOME/.bashrc"
 alias rbash="source $HOME/.bashrc"
+# ls
 alias lsa="ls -lah"
+# Docker
+alias dls="docker ps -a"
+# Anaconda
+alias condals="ls $HOME/miniconda3/envs/"
 # Productivity/misc
-alias weather="curl -4 http://wttr.in/London"
+alias wanipv6="dig @resolver1.opendns.com myip.opendns.com +short -4"
+alias weather="curl -4 http://wttr.in/Ipswich"
+alias fweather="curl -4s http://wttr.in/Ipswich?format=v2"
+alias sweather="curl -4s http://wttr.in/Ipswich?1QF"
+alias lweather='curl -4s http://wttr.in/{Ipswich,London,Toronto}?format="%c%20+%l:+%t+%w";echo'
 alias moon="curl -4 http://wttr.in/Moon"
-# Add an "alert" alias for long running commands.  Use like so:
+alias scal="cal -A 2"
+alias ycal="cal -y"
+alias todo="cat $TODO"
+alias etodo="vim $TODO"
+alias stodo='echo -e "Top 5 tasks:\n";head -n 5 $TODO;echo'
+alias ttodo='clear;echo -e "Important:\n";grep "(A)" $TODO;echo'
+alias day="clear;echo;date;echo;scal;stodo;echo;sweather;echo;moon"
+alias sday="clear;echo;date;echo;lweather;echo;scal;stodo;echo;moon"
+alias mday="clear;echo;date;echo;lweather;echo;moon"
+# Add an "alert" alias for long running commands. Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
