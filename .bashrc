@@ -107,7 +107,7 @@ alias ebash="vim $HOME/.bashrc"
 alias rbash="source $HOME/.bashrc"
 alias lsa="ls -lah"
 # Productivity/misc
-alias weather="curl -4 http://wttr.in/Ipswich"
+alias weather="curl -4 http://wttr.in/London"
 alias moon="curl -4 http://wttr.in/Moon"
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
