@@ -44,9 +44,6 @@ if [ -n "$force_color_prompt" ]; then
   fi
 fi
 
-# Env
-export TODO="$HOME/Documents/Wikis/general/content/general/todo.txt"
-
 # git
 # curl -O https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 source $HOME/bin/git-completion.bash
@@ -117,19 +114,15 @@ alias dls="docker ps -a"
 alias condals="ls $HOME/miniconda3/envs/"
 # Productivity/misc
 alias wanipv4="dig @resolver4.opendns.com myip.opendns.com +short -4"
-alias weather="curl -4 http://wttr.in/Ipswich"
-alias fweather="curl -4s http://wttr.in/Ipswich?format=v2"
-alias sweather="curl -4s http://wttr.in/Ipswich?1QF"
-alias lweather='curl -4s http://wttr.in/{Ipswich,London,Toronto}?format="%c%20+%l:+%t+%w";echo'
+alias weather="curl -4 http://wttr.in/London"
+alias fweather="curl -4s http://wttr.in/London?format=v2"
+alias sweather="curl -4s http://wttr.in/London?1QF"
+alias lweather='curl -4s http://wttr.in/{London,Toronto}?format="%c%20+%l:+%t+%w";echo'
 alias moon="curl -4 http://wttr.in/Moon"
 alias scal="cal -A 2"
 alias ycal="cal -y"
-alias todo="cat $TODO"
-alias etodo="vim $TODO"
-alias stodo='echo -e "Top 5 tasks:\n";head -n 5 $TODO;echo'
-alias ttodo='clear;echo -e "Important:\n";grep "(A)" $TODO;echo'
-alias day="clear;echo;date;echo;scal;stodo;echo;sweather;echo;moon"
-alias sday="clear;echo;date;echo;lweather;echo;scal;stodo;echo;moon"
+alias day="clear;echo;date;echo;scal;echo;sweather;echo;moon"
+alias sday="clear;echo;date;echo;lweather;echo;scal;echo;moon"
 alias mday="clear;echo;date;echo;lweather;echo;moon"
 # Add an "alert" alias for long running commands. Use like so:
 #   sleep 10; alert
